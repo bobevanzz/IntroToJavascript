@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script lang="javascript">
+	$().ready(function() {
+
+			$("#inp").val("Hello, World!");
+			$("button").click(function() {			
+			$(inp).val("The first input box");
+			$(inp).val("The second input box");
+			alert("We clicked the button.");
+			});	
+
+		});
+	</script>
+</head>
+<body>
+<input id="inp" type="text">
+<p></p>
+<button>Click Me!</button>
+</body>
+</html>
