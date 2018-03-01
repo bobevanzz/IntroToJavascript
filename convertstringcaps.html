@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script lang="javascript">	
+		var inputCtrl;
+		var labelCtrl;
+		function Main(){
+			inputCtrl = document.getElementById("inp");
+			labelCtrl = document.getElementById("lbl");
+		}
+		function Clicked(){
+			var theText = inputCtrl.value;
+			var theUpperCaseText = theText.toUpperCase();
+			labelCtrl.textContent = theUpperCaseText;
+		}
+	</script>
+</head>
+<body OnLoad="Main()">
+<input id="inp" type="text">
+<button OnClick="Clicked()">ToUpper</button>
+<label id="lbl">Label</label>
+</body>
+</html>

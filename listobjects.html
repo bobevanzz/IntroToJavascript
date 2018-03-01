@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var arrObjects = [];
+		function Main() {}
+		function Clicked(){
+			var name  = document.getElementById("name").value;
+			var phone = document.getElementById("phone").value;
+			var tbodyCtrl = document.getElementById("tbody");
+			var tr = "<tr><td>"+name+"</td><td>"+phone+"</td></tr>";
+			tbodyCtrl.innerHTML += tr;
+	}
+		function AddObject(name, phone) {
+			var obj = {
+				namekey : name,
+				phonekey : phone
+			};
+			arrObjects.push(obj);
+		}
+		function DisplayObjects(){
+			for (var obj of arrObjects) {
+				var tr = "<tr><td>"+obj.namekey+"</td><td>"+obj.phonekey+"</td></tr>";
+
+			}
+		}
+	</script>
+</head>
+<body OnLoad="Main()">
+	<div>
+		<input id="name" type="text">
+		<input id="phone" type="text">
+		<button OnClick="Clicked()">Add</button>
+	</div>
+	<table>
+		<thead>
+			<tr><th>Name</th><th>Phone</th></tr>
+		</thead>
+		<tbody id="tbody">
+			<tr><td>Greg</td><td>513-703-7315</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>
