@@ -14,11 +14,11 @@
 				$("#lbl").text(arr.join(","));
 				$("#inp").val("");
 			});
-			$("#multiplyAll").click(function() {
+			$("#displayAll").click(function() {
 			var total = 1;
 			for(var item of arr)
-			total *= item;
-			$("#lbl").text(total);
+			arr = arr.reverse();
+			$("#lbl").text(arr.join(","));
 			arr = [];
 		});
 		});
@@ -27,7 +27,7 @@
 <body>
 <input id="inp" type="text">
 <button id="add">Add</button>
-<button id="multiplyAll">Multiply All</button>
+<button id="displayAll">Display All</button>
 <label id="lbl"></label>
 </body>
 </html>
